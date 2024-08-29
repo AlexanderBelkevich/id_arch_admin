@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>ID Architects</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="content header-content">
+        <a href="/">
+          <img src="./assets/svg/logo.svg" alt="logo" />
+        </a>
+        <nav class="header-menu">
+          <a href="#" class="header-menu__link active">Список проектов</a>
+          <a href="#" class="header-menu__link">Список администраторов</a>
+        </nav>
+      </div>
+    </header>
+    <div class="content">
+      <form class="block">
+        <span class="block-title page-title">Редактирование</span>
+        <div class="create-line">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="input"
+            required
+            placeholder="Введите название проекта *"
+          />
+          <select required class="select-type">
+            <option value="1">Архитектура</option>
+            <option value="2" selected>Интерьер</option>
+          </select>
+        </div>
+        <div class="create-line">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="input"
+            required
+            placeholder="Введите краткое описание проекта *"
+          />
+          <select required class="select-year">
+            <option value="1">2019</option>
+            <option value="2" selected>2020</option>
+          </select>
+        </div>
+        <textarea
+          required
+          placeholder="Добавьте полное описание проекта"
+          class="textarea"
+        ></textarea>
+        <div class="create-bottom-field">
+          <div>
+            <input
+              id="checkbox-1"
+              class="checkbox-custom"
+              name="checkbox-1"
+              type="checkbox"
+            />
+            <label for="checkbox-1" class="checkbox-custom-label">
+              Добавить на главную
+            </label>
+          </div>
+          <span class="create-bottom-field__required">*Обязательное поле</span>
+        </div>
+
+        <div class="file-upload-component">
+          <span class="subtitle">Фото</span>
+          <div class="file-input-container">
+            <label class="custom-file-upload">
+              <input type="file" class="file-input" multiple />
+              Нажмите на поле чтобы загрузить фото к проекту
+            </label>
+          </div>
+          <div class="files-uploaded">
+            <div class="file-uploaded">
+              <div class="file-uploaded-top">
+                <span class="file-uploaded__name">Photo</span>
+                <div class="file-upload-actions">
+                  <label class="file-uploaded__favorite">
+                    <input
+                      type="radio"
+                      name="favorite-photo"
+                      id="fav-photo-1"
+                    />
+                    <span></span>
+                  </label>
+                  <label class="file-uploaded__remove">
+                    <input type="checkbox" name="remove-photo" id="photo-1" />
+                  </label>
+                </div>
+              </div>
+              <div class="file-uploaded-image">
+                <img
+                  class="file-uploaded__image"
+                  src="./assets/img/image.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="file-uploaded">
+              <div class="file-uploaded-top">
+                <span class="file-uploaded__name">Photo</span>
+                <div class="file-upload-actions">
+                  <label class="file-uploaded__favorite">
+                    <input
+                      type="radio"
+                      name="favorite-photo"
+                      id="fav-photo-1"
+                    />
+                    <span></span>
+                  </label>
+                  <label class="file-uploaded__remove">
+                    <input type="checkbox" name="remove-photo" id="photo-1" />
+                  </label>
+                </div>
+              </div>
+              <div class="file-uploaded-image">
+                <img
+                  class="file-uploaded__image"
+                  src="./assets/img/image.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <ul class="file-list"></ul>
+        </div>
+        <div class="file-upload-component">
+          <span class="subtitle">3D</span>
+          <div class="file-input-container">
+            <label class="custom-file-upload">
+              <input type="file" class="file-input" multiple />
+              Нажмите на поле чтобы загрузить фото к проекту
+            </label>
+          </div>
+          <ul class="file-list"></ul>
+        </div>
+        <div class="file-upload-component">
+          <span class="subtitle">360</span>
+          <div class="file-input-container">
+            <label class="custom-file-upload">
+              <input type="file" class="file-input" multiple />
+              Нажмите на поле чтобы загрузить фото к проекту
+            </label>
+          </div>
+          <ul class="file-list"></ul>
+        </div>
+        <div class="create-bottom">
+          <button class="button">Cохранить</button>
+          <div class="create-bottom-right">
+            <button class="button">Опубликовать</button>
+            <a href="#" class="button white square">
+              <img src="/assets/svg/show.svg" alt="" />
+            </a>
+            <a href="#" class="button white square">
+              <img src="/assets/svg/remove.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="./assets/scripts/index.js"></script>
+    <script>
+      new Choices(".select-type", {
+        searchEnabled: false,
+        itemSelectText: false,
+        shouldSort: false,
+        placeholder: true,
+        placeholderValue: "Выберите тип проекта *",
+      });
+      new Choices(".select-year", {
+        searchEnabled: false,
+        itemSelectText: false,
+        shouldSort: false,
+        placeholder: true,
+        placeholderValue: "Выберите год проекта *",
+      });
+    </script>
+  </body>
+</html>

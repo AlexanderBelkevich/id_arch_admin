@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>ID Architects</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="content header-content">
+        <a href="/">
+          <img src="./assets/svg/logo.svg" alt="logo" />
+        </a>
+        <nav class="header-menu">
+          <a href="#" class="header-menu__link active">Список проектов</a>
+          <a href="#" class="header-menu__link">Список администраторов</a>
+        </nav>
+      </div>
+    </header>
+    <div class="content">
+      <div class="block">
+        <span class="block-title page-title">Добавление администратора</span>
+        <form class="user-inputs">
+          <input
+            type="text"
+            class="input"
+            name="user-name"
+            id="user-name"
+            required
+            placeholder="Введите логин администратора"
+          />
+          <input
+            type="password"
+            class="input"
+            name="user-password"
+            id="user-password"
+            required
+            placeholder="Введите пароль администратора"
+          />
+          <div class="user-inputs-buttons">
+            <button class="button">Добавить</button>
+            <button class="button white">Отмена</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div id="overlay" class="overlay"></div>
+
+      <div id="modal" class="modal" popover="manual">
+        <span class="modal__title">Удаление администратора</span>
+        <div class="modal__description">
+          Вы действительно хотите удалить администратора?
+        </div>
+        <form class="modal-buttons">
+          <button class="button">Да</button>
+          <button class="button white" id="closeModalBtn">Нет</button>
+        </form>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="./assets/scripts/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>ID Architects</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="content header-content">
+        <a href="/">
+          <img src="./assets/svg/logo.svg" alt="logo" />
+        </a>
+        <nav class="header-menu">
+          <a href="#" class="header-menu__link active">Список проектов</a>
+          <a href="#" class="header-menu__link">Список администраторов</a>
+        </nav>
+      </div>
+    </header>
+    <div class="content">
+      <div class="projects-filter">
+        <span class="page-title">Список проектов</span>
+        <form class="projects-filter-form">
+          <select class="select" id="project-filter-select">
+            <option data-display="Select">Все проекты</option>
+            <option value="1">На главную</option>
+            <option value="2">Архитектура</option>
+            <option value="3">Интерьер</option>
+          </select>
+          <div class="projects-filter-form-search">
+            <img
+              class="projects-filter-search-icon"
+              src="./assets/svg/search.svg"
+              alt="поиск"
+            />
+            <input
+              type="text"
+              name="project-name"
+              id="project-name"
+              placeholder="Поиск по названию"
+              class="input input--logo"
+            />
+          </div>
+        </form>
+        <button class="button">Создать проект</button>
+      </div>
+      <div class="projects-list-element">
+        <div>
+          <span class="projects-list-element__type">Архитектура</span>
+          <div class="projects-list-element-name">
+            <img
+              src="./assets/svg/star-filled.svg"
+              class="projects-list-element-name__favorite"
+              alt="favorite"
+            />
+            <span class="projects-list-element-name__title">Лотос Парк</span>
+          </div>
+          <span class="projects-list-element__year">Жилой комплекс / 2020</span>
+          <div class="projects-list-element-content">
+            Жилой комплекс “Лотос Парк” - это больше, чем просто потрясающий
+            дом. Это сообщество! Общий двор, живой с цветущими цветами и нежным
+            шелестом листьев помогают объединять жильцов и создавать длительные
+            дружеские отношения. Вдумчиво разработанные жилые зоны открытой
+            планировки легко протекают на обширные балконы, обеспечивая
+            идеальное место для развлекательных друзей или наслаждаясь тихим
+            моментом с чашкой кофе и нежным гулом города в качестве вашего
+            саундтрека. Этот недавно построенный комплекс, шедевр современной
+            архитектуры, переопределяет городскую жизнь, предлагая убежище от
+            мирской суеты, где стиль и практичность беспрепятственно
+            переплетаются.
+          </div>
+        </div>
+        <div class="projects-list-element-control">
+          <button
+            class="button button--p10 projects-list-element-control__publish"
+          >
+            Опубликовать
+          </button>
+          <div class="projects-list-element-control__bottom">
+            <a href="#" class="button square white" title="Редактировать">
+              <img src="./assets/svg/edit.svg" />
+            </a>
+            <a href="#" class="button square white" title="Просмотр">
+              <img src="./assets/svg/show.svg" />
+            </a>
+            <a href="#" class="button square white open-modal" title="Удалить">
+              <img src="./assets/svg/remove.svg" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="projects-list-element gray">
+        <div>
+          <span class="projects-list-element__type">Архитектура</span>
+          <div class="projects-list-element-name">
+            <img
+              src="./assets/svg/star-filled.svg"
+              class="projects-list-element-name__favorite"
+              alt="favorite"
+            />
+            <span class="projects-list-element-name__title">Лотос Парк</span>
+          </div>
+          <span class="projects-list-element__year">Жилой комплекс / 2020</span>
+          <div class="projects-list-element-content">
+            Жилой комплекс “Лотос Парк” - это больше, чем просто потрясающий
+            дом. Это сообщество! Общий двор, живой с цветущими цветами и нежным
+            шелестом листьев помогают объединять жильцов и создавать длительные
+            дружеские отношения. Вдумчиво разработанные жилые зоны открытой
+            планировки легко протекают на обширные балконы, обеспечивая
+            идеальное место для развлекательных друзей или наслаждаясь тихим
+            моментом с чашкой кофе и нежным гулом города в качестве вашего
+            саундтрека. Этот недавно построенный комплекс, шедевр современной
+            архитектуры, переопределяет городскую жизнь, предлагая убежище от
+            мирской суеты, где стиль и практичность беспрепятственно
+            переплетаются.
+          </div>
+        </div>
+        <div class="projects-list-element-control">
+          <button
+            class="button button--p10 white projects-list-element-control__publish"
+          >
+            Снять с публикации
+          </button>
+          <div class="projects-list-element-control__bottom">
+            <a href="#" class="button square white" title="Редактировать">
+              <img src="./assets/svg/edit.svg" />
+            </a>
+            <a href="#" class="button square white" title="Просмотр">
+              <img src="./assets/svg/show.svg" />
+            </a>
+            <a href="#" class="button square white open-modal" title="Удалить">
+              <img src="./assets/svg/remove.svg" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pagination">
+        <a href="#" class="pagination-element active">1</a>
+        <a href="#" class="pagination-element">2</a>
+        <a href="#" class="pagination-element">3</a>
+        <a href="#" class="pagination-element">...</a>
+        <a href="#" class="pagination-element">10</a>
+      </div>
+    </div>
+    <footer>
+      <div id="overlay" class="overlay"></div>
+
+      <div id="modal" class="modal" popover="manual">
+        <span class="modal__title">Удаление проекта</span>
+        <div class="modal__description">
+          Вы действительно хотите удалить всю информацию о выбранном проекте?
+        </div>
+        <form class="modal-buttons">
+          <button class="button">Да</button>
+          <button class="button white" id="closeModalBtn">Нет</button>
+        </form>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="./assets/scripts/index.js"></script>
+    <script>
+      const choices = new Choices(".select", {
+        searchEnabled: false,
+        itemSelectText: false,
+        shouldSort: false,
+      });
+    </script>
+  </body>
+</html>

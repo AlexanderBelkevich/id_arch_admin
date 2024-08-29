@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>ID Architects</title>
+  </head>
+  <body>
+    <div class="wrapper-login">
+      <div class="login">
+        <img class="login__logo" src="./assets/svg/logo.svg" alt="logo" />
+        <form class="login-content">
+          <input
+            type="text"
+            name="login"
+            id="login"
+            placeholder="Введите логин"
+            required
+            oninput="loginButton()"
+            class="input login__input"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Введите пароль"
+            required
+            oninput="loginButton()"
+            class="input login__input"
+          />
+          <div class="login-bottom">
+            <div>
+              <input
+                id="checkbox-1"
+                class="checkbox-custom"
+                name="checkbox-1"
+                type="checkbox"
+              />
+              <label for="checkbox-1" class="checkbox-custom-label"
+                >Запомните меня</label
+              >
+            </div>
+            <button disabled id="submitBtn" class="button">Войти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./assets/scripts/index.js"></script>
+  </body>
+</html>
