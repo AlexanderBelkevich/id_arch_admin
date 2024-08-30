@@ -691,3 +691,148 @@ footer {
   display: flex;
   gap: 15px;
 }
+
+.project-top {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 817px;
+  margin-top: -30px;
+}
+
+.project-top-content {
+  position: relative;
+  height: 100%;
+}
+
+.slide-content__description {
+  display: block;
+  font-family: var(--museo250);
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 18px;
+}
+
+.slide-content {
+  color: white;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px 40px 20px 40px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  backdrop-filter: blur(2px);
+  width: 560px;
+}
+
+.slide-content__title {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: var(--museo);
+}
+
+.page-top {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-top-back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-family: var(--museo);
+}
+
+.page-top-info {
+  text-align: right;
+}
+
+.page-top-info__name {
+  display: block;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: var(--museo);
+  margin-bottom: 5px;
+}
+
+.page-top-info__year {
+  display: block;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.66);
+}
+
+.project-description {
+  border: 1px dashed rgba(83, 83, 83, 0.5);
+  padding: 30px;
+  margin-bottom: 64px;
+  font-size: 18px;
+  line-height: 25px;
+  @media screen and (max-width: 767px) {
+    padding: 0;
+    border: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.project-title {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--museo);
+}
+
+.project-photos {
+  display: grid;
+  gap: 3px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20px;
+}
+
+.project-photos a {
+  display: block;
+}
+
+.project-photos a img {
+  height: 323px;
+  object-fit: cover;
+  display: block;
+}
+
+#panorama {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 3px;
+}
+
+.panorama-list {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+.panorama-list__element {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.project-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.project-bottom-right {
+  display: flex;
+  gap: 15px;
+}

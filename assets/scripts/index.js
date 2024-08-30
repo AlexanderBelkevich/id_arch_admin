@@ -11,6 +11,10 @@ function loginButton() {
   }
 }
 
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
+
 // МОДАЛЬНОЕ ОКНО
 
 const openModalBtns = document.querySelectorAll(".open-modal");

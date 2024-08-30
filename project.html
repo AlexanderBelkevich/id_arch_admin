@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>ID Architects</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="content header-content">
+        <a href="/">
+          <img src="./assets/svg/logo.svg" alt="logo" />
+        </a>
+        <nav class="header-menu">
+          <a href="#" class="header-menu__link active">Список проектов</a>
+          <a href="#" class="header-menu__link">Список администраторов</a>
+        </nav>
+      </div>
+    </header>
+    <div
+      class="project-top"
+      style="background-image: url('/assets/img/top-slide-2.jpg')"
+    >
+      <div class="content project-top-content">
+        <div class="slide-content">
+          <span class="slide-content__title">Название проекта</span>
+          <div class="slide-content__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="page-top">
+        <a href="#" class="page-top-back">
+          <img src="/assets/svg/back.svg" alt="back" />
+          Назад
+        </a>
+        <div class="page-top-info">
+          <span class="page-top-info__name">"Лотос Парк"</span>
+          <span class="page-top-info__year">Жилой комплекс / 2020</span>
+        </div>
+      </div>
+      <div class="project-description">
+        Жилой комплекс “Лотос Парк” - это больше, чем просто потрясающий дом.
+        Это сообщество! Общий двор, живой с цветущими цветами и нежным шелестом
+        листьев помогают объединять жильцов и создавать длительные дружеские
+        отношения.Вдумчиво разработанные жилые зоны открытой планировки легко
+        протекают на обширные балконы, обеспечивая идеальное место для
+        развлекательных друзей или наслаждаясь тихим моментом с чашкой кофе и
+        нежным гулом города в качестве вашего саундтрека. Этот недавно
+        построенный комплекс, шедевр современной архитектуры, переопределяет
+        городскую жизнь, предлагая убежище от мирской суеты, где стиль и
+        практичность беспрепятственно переплетаются.
+      </div>
+      <span class="project-title">Фото</span>
+      <div class="project-photos">
+        <a
+          href="/assets/img/top-slide.jpg"
+          data-fancybox="gallery"
+          data-caption="Caption #1"
+        >
+          <img src="/assets/img/top-slide.jpg" />
+        </a>
+        <a
+          href="/assets/img/top-slide.jpg"
+          data-fancybox="gallery"
+          data-caption="Caption #1"
+        >
+          <img src="/assets/img/top-slide.jpg" />
+        </a>
+
+        <a
+          href="/assets/img/top-slide-2.jpg"
+          data-fancybox="gallery"
+          data-caption="Caption #2"
+        >
+          <img src="/assets/img/top-slide-2.jpg" />
+        </a>
+        <a
+          href="/assets/img/top-slide-3.jpg"
+          data-fancybox="gallery"
+          data-caption="Caption #3"
+        >
+          <img src="/assets/img/top-slide-3.jpg" />
+        </a>
+      </div>
+      <span class="project-title">3D</span>
+      <div class="project-photos">
+        <a
+          href="/assets/img/top-slide.jpg"
+          data-fancybox="gallery"
+          data-caption="Caption #1"
+        >
+          <img src="/assets/img/top-slide.jpg" />
+        </a>
+        <a
+          href="/assets/img/top-slide.jpg"
+          data-fancybox="gallery"
+          data-caption="Caption #1"
+        >
+          <img src="/assets/img/top-slide.jpg" />
+        </a>
+
+        <a
+          href="/assets/img/top-slide-2.jpg"
+          data-fancybox="gallery"
+          data-caption="Caption #2"
+        >
+          <img src="/assets/img/top-slide-2.jpg" />
+        </a>
+        <a
+          href="/assets/img/top-slide-3.jpg"
+          data-fancybox="gallery"
+          data-caption="Caption #3"
+        >
+          <img src="/assets/img/top-slide-3.jpg" />
+        </a>
+      </div>
+      <span class="project-title">360°</span>
+      <div id="panorama"></div>
+      <div class="panorama-list">
+        <img
+          class="panorama-list__element"
+          data-image="/assets/img/360-1.jpg"
+          src="/assets/img/360-1.jpg"
+          alt="panorama"
+        />
+        <img
+          class="panorama-list__element"
+          data-image="/assets/img/360-2.jpg"
+          src="/assets/img/360-2.jpg"
+          alt="panorama"
+        />
+        <img
+          class="panorama-list__element"
+          data-image="/assets/img/360-3.jpg"
+          src="/assets/img/360-3.jpg"
+          alt="panorama"
+        />
+      </div>
+      <div class="project-bottom">
+        <button class="button">Опубликовать</button>
+        <div class="project-bottom-right">
+          <a href="#" class="button square white" title="Редактировать">
+            <img src="/assets/svg/edit.svg" />
+          </a>
+          <a href="#" class="button square white open-modal" title="Удалить">
+            <img src="./assets/svg/remove.svg" />
+          </a>
+        </div>
+      </div>
+      <footer>
+        <div id="overlay" class="overlay"></div>
+
+        <div id="modal" class="modal" popover="manual">
+          <span class="modal__title">Удаление проекта</span>
+          <div class="modal__description">
+            Вы действительно хотите удалить всю информацию о выбранном проекте?
+          </div>
+          <form class="modal-buttons">
+            <button class="button">Да</button>
+            <button class="button white" id="closeModalBtn">Нет</button>
+          </form>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="./assets/scripts/index.js"></script>
+
+    <script>
+      const img = document.querySelectorAll(".panorama-list__element");
+      img.forEach((element) => {
+        element.addEventListener("click", () => {
+          pannellum.viewer("panorama", {
+            type: "equirectangular",
+            panorama: element.dataset.image,
+            autoLoad: true,
+          });
+        });
+      });
+
+      pannellum.viewer("panorama", {
+        type: "equirectangular",
+        panorama: "./assets/img/360-1.jpg",
+        autoLoad: true,
+      });
+    </script>
+  </body>
+</html>
