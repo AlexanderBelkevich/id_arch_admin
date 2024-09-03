@@ -171,6 +171,16 @@
         itemSelectText: false,
         shouldSort: false,
       });
+
+      choices.passedElement.element.addEventListener(
+        "choice",
+        function (event) {
+          const currentUrl = new URL(window.location.href);
+          currentUrl.searchParams.set("type", event.detail.value);
+          window.history.pushState({}, "", currentUrl);
+        },
+        false
+      );
     </script>
   </body>
 </html>
