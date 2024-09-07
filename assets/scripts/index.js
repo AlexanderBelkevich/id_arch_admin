@@ -76,3 +76,16 @@ document.querySelectorAll(".file-upload-component").forEach((component) => {
     fileList.appendChild(listItem);
   }
 });
+
+document
+  .querySelectorAll('.file-uploaded__remove input[type="checkbox"]')
+  .forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      const fileUploaded = this.closest(".file-uploaded");
+      if (this.checked) {
+        fileUploaded.classList.add("is-deleted");
+      } else {
+        fileUploaded.classList.remove("is-deleted");
+      }
+    });
+  });
