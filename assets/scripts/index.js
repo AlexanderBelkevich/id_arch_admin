@@ -54,23 +54,14 @@ document.querySelectorAll(".file-upload-component").forEach((component) => {
 
   // Добавление файлов в список
   fileInput.addEventListener("change", () => {
+    filesArray = [];
+    fileList.innerHTML = "";
     for (let file of fileInput.files) {
       addFileToList(file);
     }
-    fileInput.value = ""; // Очищаем поле input для возможности повторного выбора тех же файлов
   });
 
   function addFileToList(file) {
-    // Проверка, есть ли файл уже в списке
-    if (
-      filesArray.some(
-        (f) => f.file.name === file.name && f.file.size === file.size
-      )
-    ) {
-      alert("Такой файл уже был добавлен");
-      return;
-    }
-
     // Добавление файла в массив
     filesArray.push({ file, isFavorite: false });
 
@@ -82,37 +73,6 @@ document.querySelectorAll(".file-upload-component").forEach((component) => {
     fileName.classList.add("file-name");
     listItem.appendChild(fileName);
 
-    const fileActions = document.createElement("div");
-    fileActions.classList.add("file-actions");
-
-    const deleteBtn = document.createElement("span");
-    deleteBtn.classList.add("file-list-element__delete");
-    deleteBtn.innerHTML = "<img src='/assets/svg/upload-remove.svg' />";
-    deleteBtn.addEventListener("click", () => removeFile(file, listItem));
-    fileActions.appendChild(deleteBtn);
-
-    listItem.appendChild(fileActions);
     fileList.appendChild(listItem);
   }
-
-  // Удаление файла из списка
-  function removeFile(file, listItem) {
-    filesArray = filesArray.filter((f) => f.file !== file);
-    listItem.remove();
-  }
 });
-
-// Стили для удаляемых файлов
-
-document
-  .querySelectorAll('.file-uploaded__remove input[type="checkbox"]')
-  .forEach((checkbox) => {
-    checkbox.addEventListener("change", function () {
-      const fileUploaded = this.closest(".file-uploaded");
-      if (this.checked) {
-        fileUploaded.classList.add("is-deleted");
-      } else {
-        fileUploaded.classList.remove("is-deleted");
-      }
-    });
-  });
