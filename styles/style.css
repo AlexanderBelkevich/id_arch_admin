@@ -515,6 +515,10 @@ footer {
   }
 }
 
+.modal-buttons input {
+  display: none;
+}
+
 .create-line {
   display: grid;
   grid-template-columns: 1fr 230px;

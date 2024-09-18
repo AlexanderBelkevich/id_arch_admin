@@ -165,14 +165,28 @@
             <a href="#" class="button white square">
               <img src="/assets/svg/show.svg" alt="" />
             </a>
-            <a href="#" class="button white square">
+            <a href="#" class="button white square open-modal">
               <img src="/assets/svg/remove.svg" alt="" />
             </a>
           </div>
         </div>
       </form>
     </div>
-    <footer></footer>
+    <footer>
+      <div id="overlay" class="overlay"></div>
+
+      <div id="modal" class="modal" popover="manual">
+        <span class="modal__title">Удаление проекта</span>
+        <div class="modal__description">
+          Вы действительно хотите удалить всю информацию о выбранном проекте?
+        </div>
+        <form class="modal-buttons">
+          <button class="button">Да</button>
+          <button class="button white" id="closeModalBtn">Нет</button>
+          <input type="radio" name="remove" value="2" checked />
+        </form>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="./assets/scripts/index.js"></script>
     <script>
