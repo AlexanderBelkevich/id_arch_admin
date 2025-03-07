@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>ID Architects</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="content header-content">
+        <a href="/">
+          <img src="./assets/svg/logo.svg" alt="logo" />
+        </a>
+        <nav class="header-menu">
+          <a href="#" class="header-menu__link">Список проектов</a>
+          <a href="#" class="header-menu__link">Список администраторов</a>
+          <a href="#" class="header-menu__link active">Список сотрудников</a>
+        </nav>
+      </div>
+    </header>
+    <div class="content">
+      <div class="top">
+        <span class="page-title">Список сотрудников</span>
+        <a href="#" class="button">Добавить</a>
+      </div>
+      <div class="employees">
+        <div class="employee">
+          <img class="employee__img" src="./assets/img/image.png" alt="test">
+          <div class="employee-content">
+            <div class="employee-content-left">
+              <span class="employee-content__name">Наталья</span>
+              <span class="employee-content__job">Руководитель</span>
+            </div>
+            <div class="employee-content-right">
+              <div class="user-control">
+                <button class="button square white" disabled title="Наверх">
+                  <img src="./assets/svg/top.svg" />
+                </button>
+                <button class="button square white" disabled title="Вниз">
+                  <img src="./assets/svg/bottom.svg" />
+                </button>
+                <a href="#" class="button square white" title="Редактировать">
+                  <img src="./assets/svg/edit.svg" />
+                </a>
+                <a href="#" class="button square white open-modal" title="Удалить">
+                  <img src="./assets/svg/remove.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="employee">
+          <img class="employee__img" src="./assets/img/image.png" alt="test">
+          <div class="employee-content">
+            <div class="employee-content-left">
+              <span class="employee-content__name">Наталья</span>
+              <span class="employee-content__job">Руководитель</span>
+            </div>
+            <div class="employee-content-right">
+              <div class="user-control">
+                <button class="button square white" title="Наверх">
+                  <img src="./assets/svg/top.svg" />
+                </button>
+                <button class="button square white" title="Вниз">
+                  <img src="./assets/svg/bottom.svg" />
+                </button>
+                <a href="#" class="button square white" title="Редактировать">
+                  <img src="./assets/svg/edit.svg" />
+                </a>
+                <a href="#" class="button square white open-modal" title="Удалить">
+                  <img src="./assets/svg/remove.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="overlay" class="overlay"></div>
+
+      <div id="modal" class="modal" popover="manual">
+        <span class="modal__title">Удаление сотрудника</span>
+        <div class="modal__description">
+          Вы действительно хотите удалить сотрудника?
+        </div>
+        <form class="modal-buttons">
+          <button class="button">Да</button>
+          <button class="button white" id="closeModalBtn">Нет</button>
+        </form>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="./assets/scripts/index.js"></script>
+  </body>
+</html>
